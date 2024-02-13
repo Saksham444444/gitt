@@ -1,16 +1,22 @@
-// To find the difference
+// To give the gifts based on the mark obtained by the student
 #include <stdio.h>
-int difference(int p, int q);
+int check(char a,char b);
 int main(){
-    int num_1,num_2;
-    printf("Enter the first number\n");
-    scanf("%d",&num_1);
-    printf("Enter the second number\n");
-    scanf("%d",&num_2);
-    printf("The differnce of two numbers %d and %d is %d",num_1,num_2,difference(num_1,num_2));
-    return 0;
+    char math,science;
+    printf("Enter p if you are pass and character if you are fail in math\n");
+    scanf(" %c",&math);
+    printf("Enter p if you are pass and any character if you are fail in science\n");
+    scanf(" %c",&science);
+    check(math,science);
 }
-int difference(int p,int q){
-    int c = p-q;
-    return c;
-} 
+int check(char a,char b){
+    if(a=='p'&& b=='p'){
+        printf("congtatulation you one 45");
+    }
+    else if (a=='p' || b=='p'){
+        printf("You won rs 15");
+    }
+    else {
+        printf("You won nothing");
+    }
+}
